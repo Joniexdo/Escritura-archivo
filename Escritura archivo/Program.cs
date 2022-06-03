@@ -12,16 +12,9 @@ namespace Escritura_archivo
         static void Main(string[] args)
         {
             StreamWriter sw = new StreamWriter("ejemplo.txt", true);
-            string[] Lines = {
-                "Esto es la primera linea",
-                "Esto es la segunda liena",
-                "Esto es la tercera linea"
-            };
-
-            foreach (string Line in Lines)
-            {
-                sw.Write(Line);
-            }
+            Console.Write("Ingrese su nombre: ");
+            string nombre = Console.ReadLine();
+            sw.Write(nombre);
             sw.Close();
             Console.WriteLine("Escribiendo");
             Console.ReadLine();
